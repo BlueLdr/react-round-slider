@@ -31,6 +31,7 @@ export interface ITicks {
     ticksGroupSize: number;
     longerTickValuesOnly: boolean;
     showTickValues: boolean;
+    getTickLabel: (value: string | number) => string;
 }
 
 export interface ITick {
@@ -44,6 +45,8 @@ export interface ITick {
     showText: boolean;
     tickValue?: string;
 }
+
+const defaultGetTickValue = (value: string | number) => `${value}`
 
 export const getTicksSettings = (settings: ISettings, data: IData) : ITicks => {
 
@@ -73,6 +76,7 @@ export const getTicksSettings = (settings: ISettings, data: IData) : ITicks => {
         ticksGroupSize: getNumber(settings.ticksGroupSize, DEFAULT_TICKS_GROUP_SIZE),
         longerTickValuesOnly: getBoolean(settings.longerTickValuesOnly, true),
         showTickValues: getBoolean(settings.showTickValues, true),
+        getTickLabel: settings.getTickLabel || defaultGetTickValue
     };
 };
 
@@ -133,7 +137,7 @@ export const getTicks = (
                 value = setDecimalPlaces(value, data.round);
             }
 
-            tickValue = (value ?? '').toString();
+            tickValue = ticksSettings.getTickLabel(value);
         }
 
         let textX = 0;

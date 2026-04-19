@@ -76,6 +76,7 @@ export interface ISettings {
     tickValuesDistance?: number;
     tickValuesPrefix?: string;
     tickValuesSuffix?: string;
+    getTickLabel?: (value: number) => string;
 
     // disabled --------------
     disabled?: boolean;

@@ -1,13 +1,13 @@
 {
-  "name": "mz-react-round-slider",
+  "name": "blueldr-react-round-slider",
   "version": "1.0.3",
   "description": "Multi-Pointer React Round Slider",
   "type": "module",
   "types": "./dist/index.d.ts",
-  "main": "./dist/mz-react-round-slider.min.js",
+  "main": "./dist/blueldr-react-round-slider.min.js",
   "exports": {
-    "import": "./dist/mz-react-round-slider.esm.js",
-    "default": "./dist/mz-react-round-slider.min.js",
+    "import": "./dist/blueldr-react-round-slider.esm.js",
+    "default": "./dist/blueldr-react-round-slider.min.js",
     "types": "./dist/index.d.ts"
   },
   "scripts": {
@@ -44,7 +44,7 @@
   "author": "Miriam Zusin <miriam.zusin@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mzusin/react-round-slider"
+    "url": "https://github.com/blueldr/react-round-slider"
   },
   "license": "MIT",
   "browserslist": [

@@ -7,7 +7,7 @@ const watch = args.length > 1 && args[1].trim().toLowerCase() === 'watch';
 
 // settings.platform = 'neutral';
 settings.format = 'esm';
-settings.outfile = './dist/mz-react-round-slider.esm.js';
+settings.outfile = './dist/blueldr-react-round-slider.esm.js';
 settings.external = ['react']; // , 'react-redux', '@reduxjs/toolkit'
 
 if(watch){
