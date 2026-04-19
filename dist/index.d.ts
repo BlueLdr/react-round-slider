@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 import { JSX } from 'react/jsx-runtime';
 
-declare module 'mz-react-round-slider' {
+declare module 'blueldr-react-round-slider' {
 
     export interface ISettings {
         svgBgColor?: string;
