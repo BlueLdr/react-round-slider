@@ -61,6 +61,7 @@ declare module 'blueldr-react-round-slider' {
         tickValuesDistance?: number;
         tickValuesPrefix?: string;
         tickValuesSuffix?: string;
+        getTickLabel?: (value: string | number) => string;
         disabled?: boolean;
         keyboardDisabled?: boolean;
         mousewheelDisabled?: boolean;
