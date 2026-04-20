@@ -40,6 +40,12 @@ const Text = (props: ITextProps) => {
             );
         });
 
+        const getText = settings.getText
+        if (getText ) {
+            setValue(getText(values, { textPrefix: settings.textPrefix, textSuffix: settings.textSuffix, textBetween: settings.textBetween }))
+            return;
+        }
+
         const texts = values.map(value => `${ settings.textPrefix || '' }${ value }${ settings.textSuffix || '' }`);
 
         const textBetween = getString(settings.textBetween, ' ');
@@ -50,6 +56,7 @@ const Text = (props: ITextProps) => {
         pointers.pointers,
         svg.startAngleDeg,
         svg.endAngleDeg,
+        settings.getText,
         settings.textPrefix,
         settings.textSuffix,
         settings.textBetween,

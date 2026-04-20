@@ -56,6 +56,7 @@ export interface ISettings {
     textOffsetX?: number;
     textOffsetY?: number;
     textBetween?: string;
+    getText?: (values: (number | string)[], settings: Pick<ISettings, 'textPrefix' | 'textSuffix' | 'textBetween'>) => string
 
     // ticks -----------------
     enableTicks?: boolean;
@@ -76,7 +77,7 @@ export interface ISettings {
     tickValuesDistance?: number;
     tickValuesPrefix?: string;
     tickValuesSuffix?: string;
-    getTickLabel?: (value: number) => string;
+    getTickLabel?: (value: number | string) => string;
 
     // disabled --------------
     disabled?: boolean;
