@@ -45,6 +45,7 @@ declare module 'blueldr-react-round-slider' {
         textOffsetX?: number;
         textOffsetY?: number;
         textBetween?: string;
+        getText?: (values: (number | string)[], settings: Pick<ISettings, 'textPrefix' | 'textSuffix' | 'textBetween'>) => string
         enableTicks?: boolean;
         ticksWidth?: number;
         ticksHeight?: number;
