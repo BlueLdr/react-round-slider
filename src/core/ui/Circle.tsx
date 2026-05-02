@@ -116,15 +116,15 @@ const Circle = (props: ICircleProps) => {
     ]);
 
     return (
-        <g onClick={ onClick }>
+        <g>
 
             {
-                settings.pathInnerBgColor &&
                 <InnerCircle
                     maskId={ maskId }
                     settings={ settings }
                     svg={ svg }
                     circle={ circle }
+                    onClick={ onClick }
                 />
             }
 

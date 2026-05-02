@@ -265,7 +265,9 @@ const Connection = (props: IConnectionProps) => {
                     onMouseOut={ onMouseOut }
 
                     style={{
+                        pointerEvents: "visiblePainted",
                         transition: '0.2s stroke',
+                        zIndex: 2,
                     }}
                 />
             }
