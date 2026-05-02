@@ -300,7 +300,7 @@ const Pointer = (props: IPointerProps) => {
                     tabIndex={ 0 }
 
                     cursor={ pointer.disabled ? 'default' : 'pointer' }
-                    style={ outlineNoneStyle }>
+                    style={ {...outlineNoneStyle, zIndex: 3, pointerEvents: "visiblePainted"} }>
 
                     {
                         !settings.pointerSVG &&

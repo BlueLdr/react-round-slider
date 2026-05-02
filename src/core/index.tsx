@@ -270,7 +270,10 @@ export const RoundSlider = (props: ISettings) => {
                     tabIndex={ 0 }
                     focusable={ true }
                     aria-disabled={ props.disabled ? true : undefined }
-                    style={ props.svgBgColor ? { ...outlineNoneStyle, backgroundColor: props.svgBgColor } : outlineNoneStyle }
+                    style={ {
+                        ...props.svgBgColor ? { ...outlineNoneStyle, backgroundColor: props.svgBgColor } : outlineNoneStyle,
+                        pointerEvents: "none"
+                    } }
                     className={ `mz-round-slider ${ props.disabled ? 'mz-round-slider-disabled' : '' }` }>
 
                     {
