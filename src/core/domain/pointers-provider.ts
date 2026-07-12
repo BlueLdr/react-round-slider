@@ -39,6 +39,7 @@ export interface IPointer {
 
     disabled: boolean;
     ariaLabel?: string;
+    touchRadius?: number;
 }
 
 export interface IPointers {
@@ -130,6 +131,7 @@ export const initPointers = (
             id: '0',
             index: 0,
             radius: getNumber(settings.pointerRadius, DEFAULT_POINTER_RADIUS),
+            touchRadius: getNumber(settings.pointerTouchRadius, DEFAULT_POINTER_RADIUS),
             angleDeg,
             prevAngleDeg: angleDeg,
             bgColor,
@@ -148,6 +150,7 @@ export const initPointers = (
         const settingPointer = settings.pointers[i];
 
         const radius = settingPointer.radius !== undefined ? settingPointer.radius : getNumber(settings.pointerRadius, DEFAULT_POINTER_RADIUS);
+        const touchRadius = settingPointer.touchRadius !== undefined ? settingPointer.touchRadius : getNumber(settings.pointerTouchRadius, DEFAULT_POINTER_RADIUS);
         const bgColor = settingPointer.bgColor ? settingPointer.bgColor : getString(settings.pointerBgColor, DEFAULT_POINTER_BG_COLOR);
         const bgColorSelected = settingPointer.bgColorSelected ? settingPointer.bgColorSelected : getString(settings.pointerBgColorSelected, DEFAULT_POINTER_BG_COLOR_SELECTED);
         const bgColorDisabled = settingPointer.bgColorDisabled ? settingPointer.bgColorDisabled : getString(settings.pointerBgColorDisabled, DEFAULT_POINTER_BG_COLOR_DISABLED);
@@ -177,6 +180,7 @@ export const initPointers = (
             id: i.toString(),
             index: i,
             radius,
+            touchRadius: touchRadius,
             angleDeg: angleAfterStep,
             prevAngleDeg: angleAfterStep,
 

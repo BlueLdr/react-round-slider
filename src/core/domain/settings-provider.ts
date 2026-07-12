@@ -38,6 +38,7 @@ export interface ISettings {
     pointersOverlap?: boolean;
     pointerSVG?: ReactNode;
     pointerRadius?: number;
+    pointerTouchRadius?: number;
 
     // connection ------------
     hideConnection?: boolean;
@@ -94,6 +95,7 @@ export interface ISettings {
 
 export interface ISettingsPointer {
     radius?: number;
+    touchRadius?: number;
     value?: string | number;
     bgColor?: string;
     bgColorSelected?: string;

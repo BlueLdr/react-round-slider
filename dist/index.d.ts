@@ -69,6 +69,7 @@ declare module 'blueldr-react-round-slider' {
         SvgDefs?: ReactNode;
         animateOnClick?: boolean;
         animationDuration?: number;
+        pointerTouchRadius?: number;
     }
 
     export interface ISettingsPointer {
@@ -82,6 +83,7 @@ declare module 'blueldr-react-round-slider' {
         borderColor?: string;
         disabled?: boolean;
         ariaLabel?: string;
+        touchRadius?: number;
     }
 
     export interface ICircle {
