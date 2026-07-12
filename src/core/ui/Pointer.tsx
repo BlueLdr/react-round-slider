@@ -56,6 +56,7 @@ const Pointer = (props: IPointerProps) => {
 
     const {
         radius,
+      touchRadius,
         angleDeg,
         bgColor,
         bgColorSelected,
@@ -316,7 +317,19 @@ const Pointer = (props: IPointerProps) => {
                             }}
                         />
                     }
+                    {
+                        !settings.pointerSVG && radius !== touchRadius && (
+                        <circle
+                          cx={ radius/2 }
+                          cy={ radius/2 }
+                          r={ touchRadius }
+                          fill="transparent"
+                          strokeWidth={ border }
+                          stroke="transparent"
+                        />
 
+                      )
+                    }
                     {
                         settings.pointerSVG &&
                         <g>
