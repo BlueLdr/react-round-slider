@@ -1,6 +1,6 @@
 {
   "name": "blueldr-react-round-slider",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Multi-Pointer React Round Slider",
   "type": "module",
   "types": "./dist/index.d.ts",
